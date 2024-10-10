@@ -1,0 +1,39 @@
+:root{
+    --cor1:rgba(128, 128, 128, 0.938);
+    --cor2:rgb(19, 1, 1);
+    --cor3:rgb(238, 238, 238);
+
+}
+body{
+}
+nav{
+    color: var(--cor2);
+    background-color:var(--cor3) ;
+}
+
+.main{
+    background-image: url("/tela_de_login/img/fundo.png");
+    /* width: 100%; */
+    height: ;
+    
+
+}
+
+.login {
+    background-color: var(--cor3);
+    width: 50%;
+
+}
+
+
+footer{
+    flex-shrink: 0;
+    background-color: var(--cor2);
+    color: var(--cor3);
+
+}
+footer i{
+    color: var(--cor3);
+    justify-self: end ;
+
+}
