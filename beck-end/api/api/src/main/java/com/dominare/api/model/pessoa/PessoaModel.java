@@ -33,6 +33,7 @@ public class PessoaModel {
     private String telefone;
 
     @Embedded
+    // 
     private ApartamentoModel apartamento;
     @Enumerated(EnumType.STRING)
     private Relacao relacao;
