@@ -3,7 +3,8 @@
 :root{
     --cor1:rgba(128, 128, 128, 0.938);
     --cor2:rgb(19, 1, 1);
-    --cor3:rgb(238, 238, 238);
+    --cor3:#eeeeee;
+    --cor4: rgb(145, 203, 186);
     /* --cor3:rgb(224, 83, 201); */
     
 
@@ -40,15 +41,33 @@ footer i{
 
 
 
+
 /* CLASSE NÃO SEMÃNTICA o.O */
+
 .main {
     background-image: url("img/fundo.png");
     background-size: center;
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
+
+
+/* Navbar Lateral */
+.nav-lateral{
+    background-image: linear-gradient(#eeeeee,transparent );
+}
+
+.nav-item{
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+.bg-hover:hover{
+    background-color: var(--cor4);
+
+}
+
 
 /* Footer medias sociais */
 .div-socialmedia i {
