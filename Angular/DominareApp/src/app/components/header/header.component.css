@@ -1,0 +1,13 @@
+:root{
+    --cor1:rgba(128, 128, 128, 0.938);
+    --cor2:rgb(19, 1, 1);
+    --cor3:rgb(238, 238, 238);
+    /* --cor3:rgb(224, 83, 201); */
+    
+
+
+}
+nav{
+    color: var(--cor2);
+    background-color:var(--cor3) ;
+}

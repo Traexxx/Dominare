@@ -1,28 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
-
 :root{
     --cor1:rgba(128, 128, 128, 0.938);
     --cor2:rgb(19, 1, 1);
     --cor3:rgb(238, 238, 238);
     /* --cor3:rgb(224, 83, 201); */
-    
+        
 
 
 }
-
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-nav{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
-}
-
 
 footer {
 
@@ -34,20 +18,6 @@ footer i{
     color: var(--cor3);
     justify-self: end ;
 
-}
-
-/* -------------------------------- Suas classes aqui -------------------------------- */
-
-
-
-/* CLASSE NÃO SEMÃNTICA o.O */
-.main {
-    background-image: url("/img/fundo.png");
-    background-size: center;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Footer medias sociais */
@@ -92,11 +62,3 @@ footer i{
     color: transparent;
     background-clip: text;
 }
-
-/* -------------------------------- Seus #id aqui -------------------------------- */
-
-
-
-
-
-
