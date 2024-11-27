@@ -70,9 +70,7 @@ footer i{
 
 /* Tela central */
 .cadastro {
-    background-image: url("/front-end/img/fundo.png");
-    background-size: center;
-    flex: 1;
+       flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
