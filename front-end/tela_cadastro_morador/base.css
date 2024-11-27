@@ -54,6 +54,9 @@ footer i{
 }
 
 
+
+
+
 /* Navbar Lateral */
 .nav-lateral{
     background-image: linear-gradient(#eeeeee,transparent );
@@ -101,6 +104,35 @@ footer i{
 
 }
 
+
+/* Botão do whatspp */
+a {
+    text-decoration: none !important; /* Remove o sublinhado do link */
+  }
+
+  .whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Cor do botão WhatsApp */
+    border-radius: 50%; /* Tornando o botão redondo */
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Distância de 20px da parte inferior da tela */
+    right: 20px; /* Distância de 20px da parte direita da tela */
+    z-index: 9999; /* Garante que o botão esteja sempre no topo */
+  }
+
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Cor ao passar o mouse */
+  }
 
 
 /* Footer medias sociais */
