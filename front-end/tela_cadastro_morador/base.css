@@ -26,7 +26,7 @@ nav{
 
 
 footer {
-
+    
     background-color: var(--cor2);
     color: var(--cor3);
 }
@@ -106,37 +106,54 @@ footer i{
 
 
 /* Botão do whatspp */
-a {
-    text-decoration: none !important; /* Remove o sublinhado do link */
-  }
 
-  .whatsapp-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  #whatsapp-btn img {
     width: 60px;
     height: 60px;
-    background-color: #25D366; /* Cor do botão WhatsApp */
-    border-radius: 50%; /* Tornando o botão redondo */
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  #whatsapp-btn:hover img {
+    transform: scale(1.1); /* Efeito de zoom no ícone */
+  }
+
+  #whatsapp-btn:hover .tooltip {
+    display: block;
+    opacity: 1;
+  }
+
+  
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Posiciona o texto acima do botão */
+    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
     color: white;
-    font-size: 30px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px; /* Distância de 20px da parte inferior da tela */
-    right: 20px; /* Distância de 20px da parte direita da tela */
-    z-index: 9999; /* Garante que o botão esteja sempre no topo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
-
-  .whatsapp-button:hover {
-    background-color: #128C7E; /* Cor ao passar o mouse */
-    /* ADICIONAR PORTARIA AO PASSAR O MOUSE */
-  }
-
+  
 
 /* Footer medias sociais */
+
+
 .div-socialmedia i {
     color: var(--cor3);
     transition: color 0.5s;
