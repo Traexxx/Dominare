@@ -20,8 +20,8 @@ body, html {
 }
 
 nav{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
+    background-image: linear-gradient(#eeeeee,transparent );
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 
@@ -44,6 +44,12 @@ footer i{
 
 /* CLASSE NÃO SEMÃNTICA o.O */
 
+.navbar-toggler:hover {
+    background-color: var(--cor4); /* Altere para a cor desejada */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
 .main {
     background-image: url("img/fundo.png");
     background-size: center;
@@ -53,11 +59,14 @@ footer i{
     /* align-items: center; */
 }
 
+/* Navbar superior */
+
+.nav-superior{
+    color: var(--cor2);
+    background-color:var(--cor3) ;
+}
 
 /* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
-}
 
 .nav-item{
     font-size: 0.9rem;
@@ -65,6 +74,8 @@ footer i{
 }
 .bg-hover:hover{
     background-color: var(--cor4);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+
 
 }
 
