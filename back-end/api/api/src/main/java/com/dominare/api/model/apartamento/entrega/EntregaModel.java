@@ -1,7 +1,4 @@
-package com.dominare.api.model.visitas;
-
-
-import com.dominare.api.model.apartamento.ApartamentoRepository;
+package com.dominare.api.model.apartamento.entrega;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,31 +11,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "visitas")
+@Table(name = "entregas")
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-@EqualsAndHashCode(of = "id")
+@Setter
+@EqualsAndHashCode
 
 
-public class VisitasModel {
+public class EntregaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    // 
-    private ApartamentoRepository apartamento;
-    private String nome;
-    private String cpf;
-    private String data;
-    private String numeroParaContato;
-    
-    private Boolean acessoLivre;
 
-    // Contructor
-    // public VisitasModel(DadosCadastroVisita dados){
-        
-    // } 
+    private String nome;
+    private String idAP;
+
+    public EntregaModel(String nome, String idAP){
+        this.nome = nome;
+        this.idAP = idAP;
+    }
     
+
 }

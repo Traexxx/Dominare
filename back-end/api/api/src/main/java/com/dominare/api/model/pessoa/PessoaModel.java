@@ -13,11 +13,13 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "pessoas")
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode(of = "id")
