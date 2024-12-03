@@ -17,13 +17,18 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 0;
-    font-family: Arial, sans-serif;
-
 }
 
 nav{
+    /* background-image: linear-gradient(#eeeeee,transparent );
+    transition: background-color 0.3s ease, width 0.3s ease; */
     color: var(--cor2);
     background-color:var(--cor3) ;
+}
+
+/* Navbar Lateral */
+.nav-lateral{
+    background-image: linear-gradient(#eeeeee,transparent );
 }
 
 
@@ -46,20 +51,28 @@ footer i{
 
 /* CLASSE NÃO SEMÃNTICA o.O */
 
+.navbar-toggler:hover {
+    background-color: var(--cor4); /* Altere para a cor desejada */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
 .main {
     background-image: url("img/fundo.png");
     background-size: center;
     flex: 1;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    min-height: 500px;
 }
 
+/* Navbar superior */
+
+.nav-superior{
+    color: var(--cor2);
+    background-color:var(--cor3) ;
+}
 
 /* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
-}
 
 .nav-item{
     font-size: 0.9rem;
@@ -67,8 +80,57 @@ footer i{
 }
 .bg-hover:hover{
     background-color: var(--cor4);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+
 
 }
+
+/* Botão do whatspp */
+
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  #whatsapp-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  #whatsapp-btn:hover img {
+    transform: scale(1.1); /* Efeito de zoom no ícone */
+  }
+
+  #whatsapp-btn:hover .tooltip {
+    display: block;
+    opacity: 1;
+  }
+
+  
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Posiciona o texto acima do botão */
+    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+
 
 
 /* Footer medias sociais */
