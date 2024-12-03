@@ -17,6 +17,8 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 0;
+    font-family: Arial, sans-serif;
+
 }
 
 nav{
@@ -26,7 +28,7 @@ nav{
 
 
 footer {
-    
+
     background-color: var(--cor2);
     color: var(--cor3);
 }
@@ -54,9 +56,6 @@ footer i{
 }
 
 
-
-
-
 /* Navbar Lateral */
 .nav-lateral{
     background-image: linear-gradient(#eeeeee,transparent );
@@ -71,89 +70,8 @@ footer i{
 
 }
 
-/* Tela central */
-.cadastro {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.form-container {
-    background-color: var(--cor3);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px  var(--cor1);
-    width: 100%;
-    max-width: 400px; /* Ajuste de largura do formulário */
-}
-
-.login {
-    background-color: var(--cor3);
-    width: 50%;
-
-}
-
-.redefinir{
-    display: block;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    text-align: right;
-
-}
-
-
-/* Botão do whatspp */
-
-#whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  #whatsapp-btn img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
-
-  #whatsapp-btn:hover img {
-    transform: scale(1.1); /* Efeito de zoom no ícone */
-  }
-
-  #whatsapp-btn:hover .tooltip {
-    display: block;
-    opacity: 1;
-  }
-
-  
-
-  .tooltip {
-    display: none;
-    position: absolute;
-    bottom: 60px; /* Posiciona o texto acima do botão */
-    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
 
 /* Footer medias sociais */
-
-
 .div-socialmedia i {
     color: var(--cor3);
     transition: color 0.5s;

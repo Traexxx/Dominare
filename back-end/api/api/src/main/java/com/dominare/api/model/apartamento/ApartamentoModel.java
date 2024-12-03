@@ -1,5 +1,7 @@
 package com.dominare.api.model.apartamento;
 
+import com.dominare.api.model.pessoa.Relacao;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,12 +20,13 @@ public class ApartamentoModel {
 
     private String bloco;
     private int numero;
-    private String responsavel;
+    @Enumerated(EnumType.STRING)
+    private Relacao relacao;
 
     public ApartamentoModel(DadosApartamento dados) {
         this.bloco = dados.bloco();
         this.numero = dados.numero();
-        this.responsavel = dados.responsavel();
+        this.relacao = dados.relacao();
     }
 
 }

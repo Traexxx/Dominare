@@ -16,7 +16,7 @@ import com.dominare.api.model.pessoa.PessoaRepository;
 
 import jakarta.transaction.Transactional;
 
-@Controller
+@RestController
 
 public class PessoaController {
 

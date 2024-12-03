@@ -1,9 +1,7 @@
 package com.dominare.api.model.visitas;
 
-import org.hibernate.annotations.ValueGenerationType;
 
 import com.dominare.api.model.apartamento.ApartamentoRepository;
-import com.dominare.api.model.apartamento.DadosApartamento;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
