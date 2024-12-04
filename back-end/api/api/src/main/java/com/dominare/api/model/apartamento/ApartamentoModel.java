@@ -25,8 +25,8 @@ public class ApartamentoModel {
     private String bloco;
     private String numero;
  
-    @OneToMany(mappedBy = "apartamento", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PessoaModel> moradores = new ArrayList<>();
+    // @OneToMany(mappedBy = "apartamento", cascade = CascadeType.ALL, orphanRemoval = true)
+    // private List<PessoaModel> moradores = new ArrayList<>();
 
     public ApartamentoModel(DadosApartamento dados) {
         this.bloco = dados.bloco();
