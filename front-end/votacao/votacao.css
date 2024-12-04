@@ -89,6 +89,7 @@ footer i{
     box-shadow: 0 10px 10px  var(--cor1);
     width: 100%;
     max-width: 400px; /* Ajuste de largura do formulário */
+    text-align: center; /* Garante que o texto fique centralizado */
 }
 
 .login {
@@ -151,6 +152,44 @@ footer i{
     opacity: 0;
     transition: opacity 0.3s;
   }
+
+  /* botões da enquete */
+  
+
+.voting-options {
+    display: flex;
+    flex-direction: column; /* Coloca os botões em uma coluna */
+    align-items: center; /* Centraliza os botões horizontalmente */
+    margin: 20px 0;
+}
+
+.voting-options button{
+    min-width: 100%;
+}
+
+.vote-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.vote-button:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.results p {
+    font-size: 18px;
+    margin: 5px 0;
+}
   
 
 /* Footer medias sociais */
