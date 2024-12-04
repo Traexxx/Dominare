@@ -15,7 +15,7 @@ import jakarta.transaction.Transactional;
 
 
 @RestController
-@RequestMapping("/visitas")
+@RequestMapping("/visita")
 
 public class VisitaController {
     @Autowired

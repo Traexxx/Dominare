@@ -2,17 +2,21 @@ package com.dominare.api.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
+import com.dominare.api.model.apartamento.ApartamentoModel;
 import com.dominare.api.model.pessoa.PessoaModel;
 import com.dominare.api.model.pessoa.PessoaRepository;
 
 import jakarta.transaction.Transactional;
 
-@RestController
+@RequestMapping("/pessoa")
+@Controller
 
 public class PessoaController {
 
@@ -31,18 +35,26 @@ public class PessoaController {
     @GetMapping("/cadastrar")
     public String mostrarFormulario (Model model){
         model.addAttribute("pessoa", new PessoaModel());
-        return "cadastroPessoa";
+        return "pessoa/cadastroPessoa";
     }
 
 
 
     // Post
-    @PostMapping
+    @PostMapping("/cadastroPessoa")
     @Transactional
-    public String cadastrarPessoa (PessoaModel pessoa ){
-        repository.save(pessoa);
-        return "redirect:/";
+    public String salvarPessoa(@ModelAttribute PessoaModel pessoa) {
+    
+        if (pessoa.getApartamento() == null) {
+        ApartamentoModel apartamento = new ApartamentoModel();
+        apartamento.setBloco("A");
+        apartamento.setNumero("101");
+        pessoa.setApartamento(apartamento); 
     }
+    repository.save(pessoa);
+    return "redirect:/pessoa/cadastrar";
+}
+
 
 
     // Put

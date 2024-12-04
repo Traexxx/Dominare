@@ -1,8 +1,6 @@
 package com.dominare.api.model.visitas;
 
 
-import com.dominare.api.model.apartamento.ApartamentoRepository;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,8 +25,7 @@ public class VisitasModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    // 
-    private ApartamentoRepository apartamento;
+    private String apartamento;
     private String nome;
     private String cpf;
     private String data;

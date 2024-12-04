@@ -18,9 +18,9 @@ const descricaoAvisoInput = document.getElementById("descricao-aviso");
 
 // Função para exibir o modal
 function showModal(aviso) {
+    modal.classList.remove("hidden");
     avisoTitle.textContent = aviso.titulo;
     avisoDescription.textContent = aviso.descricao;
-    modal.classList.remove("hidden");
 }
 // Renderizar a lista de avisos
 function renderAvisos() {
