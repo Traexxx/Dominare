@@ -37,6 +37,52 @@ footer i{
 
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+}
+
+thead {
+    background-color: #f2ea72; /* Cor de fundo para o cabeçalho */
+    color: #595302; /* Cor do texto */
+    font-weight: bold;
+}
+
+thead th {
+    padding-left: 10px; /* Espaçamento interno */
+    /* text-align: left; Alinhamento do texto */
+    border-bottom: 2px solid #ddd; /* Linha de separação */
+    ;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alterna cores das linhas */
+}
+
+
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Linha separadora entre linhas */
+}
+
+button.bg-hover {
+    background-color: transparent; /* Remove o fundo padrão */
+    border: none; /* Remove bordas */
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
+}
+
+button.bg-hover:hover {
+    background-color: var(--cor4); /* Fundo ao passar o mouse */
+    color: var(--cor3); /* Texto branco */
+}
 /* -------------------------------- Suas classes aqui -------------------------------- */
 
 
@@ -63,72 +109,30 @@ footer i{
     font-size: 0.9rem;
     border-radius: 8px;
 }
+
+.button button{
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
 .bg-hover:hover{
     background-color: var(--cor4);
 
 }
 
-.button button{
-    border-radius: 10px;
-    border: none;
+.tabela {
+    width: 80vw ;  /* Define o tamanho da tabela em relação ao container */
+    margin: 20px auto; /* Centraliza a tabela */
+    border: 2px solid #ddd; /* Borda para a tabela */
+    border-radius: 10px; /* Arredondamento nas bordas */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse a borda */
+    box-shadow: 8px 8px 4px 8px rgba(0, 0, 0, 0.158); /* Sombreamento */
     background-color: var(--cor3);
 }
-
-/* Tabela */
-
-.tabela {
-    width: 1000px; /* Define o tamanho da tabela em relação ao container */
-    margin: 20px auto; /* Centraliza a tabela */
-    border: 1px solid #ddd; /* Borda para a tabela */
-    border-radius: 8px; /* Arredondamento nas bordas */
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse a borda */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreamento */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as bordas */
-}
-
-thead {
-    background-color: #f2ea72; /* Cor de fundo para o cabeçalho */
-    color: #595302; /* Cor do texto */
-    font-weight: bold;
-}
-
-thead th {
-    padding: 12px; /* Espaçamento interno */
-    text-align: left; /* Alinhamento do texto */
-    border-bottom: 2px solid #ddd; /* Linha de separação */
-}
-
-tbody tr {
-    transition: background-color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alterna cores das linhas */
-}
-
-
-
-tbody td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd; /* Linha separadora entre linhas */
-}
-
-button.bg-hover {
-    background-color: transparent; /* Remove o fundo padrão */
-    border: none; /* Remove bordas */
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
-}
-
-button.bg-hover:hover {
-    background-color: #0578a6; /* Fundo ao passar o mouse */
-    color: #fff; /* Texto branco */
+.pdf{
+    text-align: right;
+    padding-right: 50px;
 }
 
 
