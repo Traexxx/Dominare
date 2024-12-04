@@ -20,20 +20,13 @@ body, html {
 }
 
 nav{
-    /* background-image: linear-gradient(#eeeeee,transparent );
-    transition: background-color 0.3s ease, width 0.3s ease; */
     color: var(--cor2);
     background-color:var(--cor3) ;
 }
 
-/* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
-}
-
 
 footer {
-
+    
     background-color: var(--cor2);
     color: var(--cor3);
 }
@@ -51,28 +44,23 @@ footer i{
 
 /* CLASSE NÃO SEMÃNTICA o.O */
 
-.navbar-toggler:hover {
-    background-color: var(--cor4); /* Altere para a cor desejada */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-
 .main {
-    background-image: url("img/fundo.png");
+    background-image: url("../img/fundo.png");
     background-size: center;
     flex: 1;
     display: flex;
+    
     min-height: 500px;
 }
 
-/* Navbar superior */
 
-.nav-superior{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
-}
+
+
 
 /* Navbar Lateral */
+.nav-lateral{
+    background-image: linear-gradient(#eeeeee,transparent );
+}
 
 .nav-item{
     font-size: 0.9rem;
@@ -80,10 +68,46 @@ footer i{
 }
 .bg-hover:hover{
     background-color: var(--cor4);
-    transition: background-color 0.5s ease, transform 0.3s ease;
-
 
 }
+
+/* Tela central */
+
+
+.cadastro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-container {
+    background-color: var(--cor3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px  var(--cor1);
+    width: 100%;
+    max-width: 400px; /* Ajuste de largura do formulário */
+}
+
+.login {
+    background-color: var(--cor3);
+    width: 50%;
+
+}
+
+.redefinir{
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    text-align: right;
+
+}
+
+
+
 
 /* Botão do whatspp */
 
@@ -131,9 +155,9 @@ footer i{
   }
   
 
-
-
 /* Footer medias sociais */
+
+
 .div-socialmedia i {
     color: var(--cor3);
     transition: color 0.5s;
@@ -174,6 +198,68 @@ footer i{
     background-image: linear-gradient(45deg, #0059ff, #001a49);
     color: transparent;
     background-clip: text;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
 }
 
 /* -------------------------------- Seus #id aqui -------------------------------- */
