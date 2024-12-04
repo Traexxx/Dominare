@@ -1,43 +1,61 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const toggler = document.querySelector(".navbar-toggler");
-    const icon = toggler.querySelector("i");
+// Objeto para armazenar os votos
+let votos = {
+    opcao1: 0,
+    opcao2: 0,
+    opcao3: 0
+};
 
-    toggler.addEventListener("click", function () {
-        const isExpanded = toggler.getAttribute("aria-expanded") === "true";
+// Carregar votos salvos do localStorage, se existirem
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('votos')) {
+        votos = JSON.parse(localStorage.getItem('votos'));
+        // Atualiza a exibição do resultado na página
+        document.getElementById('resultado-opcao1').textContent = votos.opcao1;
+        document.getElementById('resultado-opcao2').textContent = votos.opcao2;
+        document.getElementById('resultado-opcao3').textContent = votos.opcao3;
+    }
+    // Verifica se há um tempo de bloqueio armazenado
+    if (localStorage.getItem('bloqueioFim')) {
+        let bloqueioFim = parseInt(localStorage.getItem('bloqueioFim'));
+        let tempoRestante = bloqueioFim - Date.now();
 
-        
-        if (isExpanded) {
-            icon.classList.remove("bi-chevron-right");
-            icon.classList.add("bi-chevron-left");
-        } else {
-            icon.classList.remove("bi-chevron-left");
-            icon.classList.add("bi-chevron-right");
+        if (tempoRestante > 0) {
+            // Se o tempo de bloqueio ainda não acabou, desativa a votação
+            votacaoBloqueada = true;
+            setTimeout(() => {
+                votacaoBloqueada = false;
+                alert("Você pode votar novamente agora.");
+            }, tempoRestante);
         }
-    });
-});
-
-document.getElementById("submitVote").addEventListener("click", function () {
-    const options = document.getElementsByName("voteOption");
-    let selectedOption = null;
-
-    // Verifica qual opção foi selecionada
-    options.forEach(option => {
-        if (option.checked) {
-            selectedOption = option.value;
-        }
-    });
-
-    const resultMessage = document.getElementById("resultMessage");
-
-    if (selectedOption) {
-        resultMessage.textContent = `Você votou em: ${selectedOption}`;
-        resultMessage.style.color = "green";
-
-        // Aqui você pode enviar o voto para o backend usando uma requisição fetch() ou outra abordagem
-        console.log(`Voto enviado: ${selectedOption}`);
-    } else {
-        resultMessage.textContent = "Por favor, selecione uma opção antes de enviar.";
-        resultMessage.style.color = "red";
     }
 });
 
+// Variável para rastrear se a votação está bloqueada
+let votacaoBloqueada = false;
+
+// Função para votar em uma opção
+function vote(opcao) {
+    if (votacaoBloqueada) {
+        alert("Você só pode votar novamente após um minuto.");
+        return;
+    }
+
+    if (votos.hasOwnProperty(opcao)) { // Verifica se a opção existe no objeto de votos
+        votos[opcao]++;  // Incrementa o voto para a opção escolhida
+        // Atualiza a exibição do resultado na página
+        document.getElementById(`resultado-${opcao}`).textContent = votos[opcao];
+
+        // Salva a contagem de votos no localStorage
+        localStorage.setItem('votos', JSON.stringify(votos));
+
+        // Define o tempo de bloqueio de um minuto a partir de agora
+        votacaoBloqueada = true;
+        localStorage.setItem('bloqueioFim', Date.now() + 60000); // Salva o tempo de término do bloqueio
+        setTimeout(() => {
+            votacaoBloqueada = false;
+            alert("Você pode votar novamente agora.");
+        }, 60000); // 60000 ms = 1 minuto
+    } else {
+        console.error('Opção inválida de voto:', opcao);
+    }
+}
