@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             votacaoBloqueada = true;
             setTimeout(() => {
                 votacaoBloqueada = false;
-                alert("Você pode votar novamente agora.");
             }, tempoRestante);
         }
     }
@@ -36,7 +35,7 @@ let votacaoBloqueada = false;
 // Função para votar em uma opção
 function vote(opcao) {
     if (votacaoBloqueada) {
-        alert("Você só pode votar novamente após um minuto.");
+        alert("Você já realizou seu voto!");
         return;
     }
 
@@ -53,7 +52,6 @@ function vote(opcao) {
         localStorage.setItem('bloqueioFim', Date.now() + 60000); // Salva o tempo de término do bloqueio
         setTimeout(() => {
             votacaoBloqueada = false;
-            alert("Você pode votar novamente agora.");
         }, 60000); // 60000 ms = 1 minuto
     } else {
         console.error('Opção inválida de voto:', opcao);
