@@ -15,6 +15,26 @@
 /* .div-cards{
     margin-top: 20px;
 } */
+
+.img_mobile {
+  max-height: 140px;
+}
+
+.img_desktop {
+  max-height: 500px;
+}
+
+@media (max-width: 576px) {
+  .menu {
+    font-size: 15px;
+  }
+  .menu i {
+    font-size: 25px ;
+  }
+}
+
+
+
 .div-socialmedia i {
   color: var(--cor3);
 }
@@ -22,6 +42,7 @@
 .div-b {
   border: 1px solid red;
 }
+
 .div-icons {
   font-size: 50px;
   color: var(--cor2);
@@ -53,36 +74,34 @@ footer i {
 }
 
 #instagram i:hover {
-  background-image: linear-gradient(
-    90deg,
-    #f09433,
-    #e6683c,
-    #dc2743,
-    #cc2366,
-    #bc1888
-  ); /*Instagram */
-  color: transparent; /* Faz o gradiente ser visível */
+  background-image: linear-gradient(90deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888);
+  /*Instagram */
+  color: transparent;
+  /* Faz o gradiente ser visível */
   background-clip: text;
 }
 
 #facebook i:hover {
-  background-image: linear-gradient(
-    90deg,
-    #3b5998,
-    #2f55a4,
-    #2050b3
-  ); /*Facebook */
+  background-image: linear-gradient(90deg,
+      #3b5998,
+      #2f55a4,
+      #2050b3);
+  /*Facebook */
   color: transparent;
   background-clip: text;
 }
 
 #linkedin i:hover {
-  background-image: linear-gradient(
-    45deg,
-    #296d8d,
-    #1d7199,
-    #0d76a9
-  ); /* Linkindin */
+  background-image: linear-gradient(45deg,
+      #296d8d,
+      #1d7199,
+      #0d76a9);
+  /* Linkindin */
   color: transparent;
   background-clip: text;
 }
