@@ -11,7 +11,6 @@ body {
     background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-    padding-top: 50px;
 }
 
 /* Cabeçalho */
@@ -57,7 +56,6 @@ header nav ul li a:hover {
 #contrate {
     background-color: #ffffff;
     padding: 60px 20px;
-    margin-top: 80px;
 }
 
 #contrate .container {
