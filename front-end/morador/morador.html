@@ -17,24 +17,40 @@
 </head>
 
 <body>
-  <nav class="navbar">
+  <div class="navbar nav-superior">
     <a href="../modelos/model-sidebar/model-sidebar.html" class="logo mx-auto py-0">
       <img src="../img/logo.png" alt="Logo da Dominare" width="200px" />
     </a>
-  </nav>
+    <i class="bi bi-box-arrow-right"></i>
+  </div>
 
   <div class="main d-flex">
-    <div class="navbar nav-lateral row flex-column py-0 justify-content-start h-100 text-center">
-            <a href="#"
-                class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Moradores</a>
-            <a href="../visitante/visitante.html"
-                class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Visitantes</a>
-            <a href="../quadro_de_avisos/quadro_de_avisos.html" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Quadro de Avisos</a>
-            <a href="../financeiro/financeiro.html"
-                class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Financeiro</a>
-            <a href="../entregas/entregas.html" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Entregas</a>
-            <a href="../votacao/votacao.html" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Votação Online</a>
-    </div>
+    <nav class="navbar navbar-expand-sm nav-lateral">
+      <button 
+      class="navbar-toggler align-self-start ms-0 mt-0 mb-1" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navMenu" 
+      aria-controls="navMenu" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <i class="bi bi-chevron-left"></i>
+  </button>
+  
+
+      <div class="collapse navbar-collapse show row flex-column py-0 justify-content-start h-100 text-center" id="navMenu">
+        <a href="../../morador/morador.html"
+        class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Moradores</a>
+    <a href="../../visitante/visitante.html"
+        class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Visitantes</a>
+    <a href="" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Quadro de Avisos</a>
+    <a href="../../financeiro/financeiro.html"
+        class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Financeiro</a>
+    <a href="" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Entregas</a>
+    <a href="../../votacao/votacao.html" class="nav-item text-decoration-none text-black py-2 ps-4 pe-2 bg-hover ">Votação Online</a>
+      </div>
+
+  </nav>
 
     <div class="cadastro d-flex justify-content-center">
       <div class="form-container">

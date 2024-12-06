@@ -20,15 +20,8 @@ body, html {
 }
 
 nav{
-    /* background-image: linear-gradient(#eeeeee,transparent );
-    transition: background-color 0.3s ease, width 0.3s ease; */
-    color: var(--cor2);
-    background-color:var(--cor3) ;
-}
-
-/* Navbar Lateral */
-.nav-lateral{
     background-image: linear-gradient(#eeeeee,transparent );
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 
@@ -62,7 +55,8 @@ footer i{
     background-size: center;
     flex: 1;
     display: flex;
-    min-height: 500px;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 /* Navbar superior */
@@ -85,7 +79,27 @@ footer i{
 
 }
 
-/* Botão do whatspp */
+
+/* Footer medias sociais */
+.div-socialmedia i {
+    color: var(--cor3);
+    transition: color 0.5s;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Posiciona o texto acima do botão */
+    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
 #whatsapp-btn {
     position: fixed;
@@ -113,31 +127,6 @@ footer i{
     opacity: 1;
   }
 
-  
-
-  .tooltip {
-    display: none;
-    position: absolute;
-    bottom: 60px; /* Posiciona o texto acima do botão */
-    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-
-
-
-/* Footer medias sociais */
-.div-socialmedia i {
-    color: var(--cor3);
-    transition: color 0.5s;
-}
 
 #instagram i:hover {
     background-image: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /*Instagram */
@@ -177,9 +166,3 @@ footer i{
 }
 
 /* -------------------------------- Seus #id aqui -------------------------------- */
-
-
-
-
-
-

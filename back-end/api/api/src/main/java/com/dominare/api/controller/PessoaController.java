@@ -29,7 +29,7 @@ public class PessoaController {
     @GetMapping("/")
     public String listarPessoas (Model model){
         model.addAttribute("pessoas", repository.findAll());
-        return "listarPessoas";
+        return "pessoa/listarPessoas";
     }
 
     @GetMapping("/cadastrar")
@@ -41,18 +41,19 @@ public class PessoaController {
 
 
     // Post
-    @PostMapping("/cadastroPessoa")
+    // @PostMapping("/cadastroPessoa")
+    @PostMapping("/cadastrar")
     @Transactional
     public String salvarPessoa(@ModelAttribute PessoaModel pessoa) {
     
-        if (pessoa.getApartamento() == null) {
-        ApartamentoModel apartamento = new ApartamentoModel();
-        apartamento.setBloco("A");
-        apartamento.setNumero("101");
-        pessoa.setApartamento(apartamento); 
-    }
-    repository.save(pessoa);
-    return "redirect:/pessoa/cadastrar";
+        // if (pessoa.getApartamento() == null) {
+        // ApartamentoModel apartamento = new ApartamentoModel();
+        // apartamento.setBloco("A");
+        // apartamento.setNumero("101");
+        // pessoa.setApartamento(apartamento); 
+        // }
+        repository.save(pessoa);
+        return "redirect:/pessoa/cadastrar";
 }
 
 

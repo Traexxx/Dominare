@@ -23,10 +23,10 @@ public class PessoaModel {
     private String cpf;
     private String telefone;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "apartamento", nullable = false)
-    // @Embedded
-    private ApartamentoModel apartamento;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "apartamento", nullable = false)
+    // // @Embedded
+    // private ApartamentoModel apartamento;
 
     @Enumerated(EnumType.STRING)
     private Relacao relacao;
@@ -36,7 +36,7 @@ public class PessoaModel {
         this.dataDeNascimento = dados.dataDeNascimento();
         this.cpf = dados.cpf();
         this.telefone = dados.telefone();
-        this.relacao = dados.relacao();
-        this.apartamento = new ApartamentoModel(dados.apartamento());
+        // this.relacao = dados.relacao();
+        // this.apartamento = new ApartamentoModel(dados.apartamento());
     }
 }
