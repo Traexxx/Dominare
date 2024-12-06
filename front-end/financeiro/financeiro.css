@@ -20,22 +20,11 @@ body, html {
 }
 
 nav{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
+    background-image: linear-gradient(#eeeeee,transparent );
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 
-nav i {
-    font-size: 25px;
-    margin-right: 20px;
-}
-
-@media (min-width: 576px) {
-    nav i {
-        font-size: 50px;
-        margin-right: 20px;
-    }
-}
 
 footer {
 
@@ -84,11 +73,12 @@ tbody td {
 
 button.bg-hover {
     background-color: transparent; /* Remove o fundo padrão */
+    color: #404040;
     border: none; /* Remove bordas */
     cursor: pointer;
     padding: 8px;
     border-radius: 4px;
-    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
+    transition: 0.3s ease; /* Animação ao passar o mouse */
 }
 
 button.bg-hover:hover {
@@ -112,10 +102,24 @@ button.bg-hover:hover {
 }
 
 
-/* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
-}
+
+.nav-superior {
+    color: var(--cor2);
+    background-color: var(--cor3);
+  }
+  
+  
+  .nav-superior i {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    nav i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
+  }
 
 .nav-item{
     font-size: 0.9rem;
@@ -133,20 +137,95 @@ button.bg-hover:hover {
 
 }
 
+.conteudo{
+    background-color: var(--cor3);
+    box-shadow: 0 8px 4px 8px rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+}
+
 .tabela {
-    width: 80vw ;  /* Define o tamanho da tabela em relação ao container */
+    width: 75vw ;  /* Define o tamanho da tabela em relação ao container */
     margin: 20px auto; /* Centraliza a tabela */
     border: 2px solid #ddd; /* Borda para a tabela */
     border-radius: 10px; /* Arredondamento nas bordas */
     overflow: hidden; /* Garante que o conteúdo não ultrapasse a borda */
-    box-shadow: 8px 8px 4px 8px rgba(0, 0, 0, 0.158); /* Sombreamento */
+    box-shadow: 0px 4px 4px 8px rgba(151, 151, 151, 0.158); /* Sombreamento */
     background-color: var(--cor3);
+    align-self: end !important;
+    max-height: 60vh;
 }
 .pdf{
     text-align: right;
     padding-right: 50px;
 }
 
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Posiciona o texto acima do botão */
+    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+
+  
+/* Tituto da página */
+
+#assistenteFinanceiro{
+    justify-self: start !important;
+    margin: 30px;
+    font-family:"Crimson Pro", serif; /* Nova fonte */
+    font-size: 3rem; /* Ajuste do tamanho da fonte */
+    font-weight: 650; /* Peso da fonte para destaque */
+    color: #404040;
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    
+}
+
+.mesAno{
+    padding-left: 10px;
+}
+
+.dataDeNascimento{
+    text-align: center;
+}
+
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  #whatsapp-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  #whatsapp-btn:hover img {
+    transform: scale(1.1); /* Efeito de zoom no ícone */
+  }
+
+  #whatsapp-btn:hover .tooltip {
+    display: block;
+    opacity: 1;
+  }
+
+  
+
+  
 
 /* Footer medias sociais */
 .div-socialmedia i {

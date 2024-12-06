@@ -20,23 +20,13 @@ body, html {
 }
 
 nav{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
+    background-image: linear-gradient(#eeeeee,transparent );
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 
 
-nav i {
-    font-size: 25px;
-    margin-right: 20px;
-}
 
-@media (min-width: 576px) {
-    nav i {
-        font-size: 50px;
-        margin-right: 20px;
-    }
-}
 
 
 footer {
@@ -68,13 +58,23 @@ footer i{
 }
 
 
-
-
-
-/* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
-}
+.nav-superior {
+    color: var(--cor2);
+    background-color: var(--cor3);
+  }
+  
+  
+  .nav-superior i {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    nav i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
+  }
 
 .nav-item{
     font-size: 0.9rem;
