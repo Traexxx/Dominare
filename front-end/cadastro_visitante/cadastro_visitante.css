@@ -17,14 +17,14 @@ html {
   padding: 0;
 }
 
-.nav-superior {
+nav {
   color: var(--cor2);
   background-color: var(--cor3);
 }
 
 
-.nav-superior i {
-  font-size: 50px;
+nav i {
+  font-size: 25px;
   margin-right: 20px;
 }
 
@@ -58,9 +58,8 @@ footer i {
 }
 
 /* Navbar Lateral */
-nav{
-  background-image: linear-gradient(#eeeeee,transparent );
-  transition: background-color 0.3s ease, width 0.3s ease;
+.nav-lateral {
+  background-image: linear-gradient(#eeeeee, transparent);
 }
 
 .nav-item {
