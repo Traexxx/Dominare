@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
-:root{
-    --cor1:rgba(128, 128, 128, 0.938);
-    --cor2:rgb(19, 1, 1);
-    --cor3:#eeeeee;
+:root {
+    --cor1: rgba(128, 128, 128, 0.938);
+    --cor2: rgb(19, 1, 1);
+    --cor3: #eeeeee;
     --cor4: rgb(145, 203, 186);
     /* --cor3:rgb(224, 83, 201); */
-    
+
 
 
 }
 
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     display: flex;
@@ -19,16 +20,28 @@ body, html {
     padding: 0;
 }
 
-nav{
+nav {
     /* background-image: linear-gradient(#eeeeee,transparent );
     transition: background-color 0.3s ease, width 0.3s ease; */
     color: var(--cor2);
-    background-color:var(--cor3) ;
+    background-color: var(--cor3);
+}
+
+nav i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+@media (min-width: 576px) {
+    nav i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
 }
 
 /* Navbar Lateral */
-.nav-lateral{
-    background-image: linear-gradient(#eeeeee,transparent );
+.nav-lateral {
+    background-image: linear-gradient(#eeeeee, transparent);
 }
 
 
@@ -38,9 +51,9 @@ footer {
     color: var(--cor3);
 }
 
-footer i{
+footer i {
     color: var(--cor3);
-    justify-self: end ;
+    justify-self: end;
 
 }
 
@@ -52,7 +65,8 @@ footer i{
 /* CLASSE NÃO SEMÃNTICA o.O */
 
 .navbar-toggler:hover {
-    background-color: var(--cor4); /* Altere para a cor desejada */
+    background-color: var(--cor4);
+    /* Altere para a cor desejada */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -67,18 +81,19 @@ footer i{
 
 /* Navbar superior */
 
-.nav-superior{
+.nav-superior {
     color: var(--cor2);
-    background-color:var(--cor3) ;
+    background-color: var(--cor3);
 }
 
 /* Navbar Lateral */
 
-.nav-item{
+.nav-item {
     font-size: 0.9rem;
     border-radius: 8px;
 }
-.bg-hover:hover{
+
+.bg-hover:hover {
     background-color: var(--cor4);
     transition: background-color 0.5s ease, transform 0.3s ease;
 
@@ -95,31 +110,34 @@ footer i{
     border: none;
     cursor: pointer;
     z-index: 9999;
-  }
-  
-  #whatsapp-btn img {
+}
+
+#whatsapp-btn img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     transition: transform 0.3s;
-  }
+}
 
-  #whatsapp-btn:hover img {
-    transform: scale(1.1); /* Efeito de zoom no ícone */
-  }
+#whatsapp-btn:hover img {
+    transform: scale(1.1);
+    /* Efeito de zoom no ícone */
+}
 
-  #whatsapp-btn:hover .tooltip {
+#whatsapp-btn:hover .tooltip {
     display: block;
     opacity: 1;
-  }
+}
 
-  
 
-  .tooltip {
+
+.tooltip {
     display: none;
     position: absolute;
-    bottom: 60px; /* Posiciona o texto acima do botão */
-    background-color: #25D366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+    bottom: 60px;
+    /* Posiciona o texto acima do botão */
+    background-color: #25D366;
+    /* Cor do fundo da tooltip (verde do WhatsApp) */
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -128,8 +146,8 @@ footer i{
     z-index: 999;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
+}
+
 
 
 
@@ -140,46 +158,44 @@ footer i{
 }
 
 #instagram i:hover {
-    background-image: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /*Instagram */
-    color: transparent; /* Faz o gradiente ser visível */
-    background-clip: text; 
+    background-image: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    /*Instagram */
+    color: transparent;
+    /* Faz o gradiente ser visível */
+    background-clip: text;
 }
 
 #facebook i:hover {
-    background-image: linear-gradient(90deg, #3b5998,#2f55a4, #2050b3); /*Facebook */
+    background-image: linear-gradient(90deg, #3b5998, #2f55a4, #2050b3);
+    /*Facebook */
     color: transparent;
-    background-clip: text; 
-    
-}
-
-#linkedin i:hover{
-    background-image: linear-gradient(45deg, #296d8d, #1d7199, #0d76a9); /* Linkindin */
-    color : transparent;
     background-clip: text;
+
 }
 
-#youtube i:hover{
-    background-image: linear-gradient(45deg, #d11b15, #a70702 );
+#linkedin i:hover {
+    background-image: linear-gradient(45deg, #296d8d, #1d7199, #0d76a9);
+    /* Linkindin */
     color: transparent;
     background-clip: text;
 }
 
-#whatsapp i:hover{
-    background-image: linear-gradient(45deg,#07ff77, #00ff84);
+#youtube i:hover {
+    background-image: linear-gradient(45deg, #d11b15, #a70702);
     color: transparent;
     background-clip: text;
 }
 
-#telefone i:hover{
+#whatsapp i:hover {
+    background-image: linear-gradient(45deg, #07ff77, #00ff84);
+    color: transparent;
+    background-clip: text;
+}
+
+#telefone i:hover {
     background-image: linear-gradient(45deg, #0059ff, #001a49);
     color: transparent;
     background-clip: text;
 }
 
 /* -------------------------------- Seus #id aqui -------------------------------- */
-
-
-
-
-
-

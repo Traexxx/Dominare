@@ -26,6 +26,19 @@ nav{
     background-color:var(--cor3) ;
 }
 
+
+nav i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+@media (min-width: 576px) {
+    nav i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
+}
+
 /* Navbar Lateral */
 .nav-lateral{
     background-image: linear-gradient(#eeeeee,transparent );
