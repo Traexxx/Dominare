@@ -24,8 +24,9 @@ public class PessoaController {
     // MÉTODOS HTTPS
     
     // Get
-    @GetMapping("/")
-    public String listarPessoas (Model model){
+
+    @GetMapping({"/", "/lista"})
+    public String listarMoradores(Model model) {
         model.addAttribute("pessoas", repository.findAll());
         return "pessoa/listarPessoas";
     }
@@ -35,6 +36,8 @@ public class PessoaController {
         model.addAttribute("pessoa", new PessoaModel());
         return "pessoa/cadastroPessoa";
     }
+
+
 
     // Post
     // @PostMapping("/cadastroPessoa")
