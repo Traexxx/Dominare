@@ -16,11 +16,13 @@
         <tr>
           <th>ID</th>
           <th>Nome</th>
-          <th>Preço</th>
+          <th>Preço
+            <p th:if="${#lists.isEmpty(pessoas)}">Nenhuma pessoa encontrada.</p>
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr th:each="/pessoa/PessoaModel : ${pessoas}">
+        <tr th:each="PessoaModel : ${pessoas}">
           <td th:text="${PessoaModel.id}">ID do Morador</td>
           <td th:text="${PessoaModel.nome}">Nome do Morador</td>
           <td th:text="${PessoaModel.cpf}">CPF do Morador</td>

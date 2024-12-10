@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 import com.dominare.api.model.pessoa.PessoaModel;
@@ -28,6 +30,7 @@ public class PessoaController {
     @GetMapping({"/", "/lista"})
     public String listarMoradores(Model model) {
         model.addAttribute("pessoas", repository.findAll());
+
         return "pessoa/listarPessoas";
     }
 
@@ -48,9 +51,15 @@ public class PessoaController {
         return "redirect:/pessoa/cadastrar";
 }
 
+@PutMapping("/lista/{id}")
+    @Transactional
+    public String atualizar(@ModelAttribute PessoaModel dados) {
+        PessoaModel pessoa = repository.getReferenceById(dados.getId());
+        pessoa.atualizarPessoa(dados);
 
+        return "redirect:/pessoa/lista";
+    }
 
-    // Put
 
     // Delete
 

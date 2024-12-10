@@ -34,6 +34,28 @@ public class PessoaModel {
     // @Enumerated(EnumType.STRING)
     // private Relacao relacao;
 
+
+    public void atualizarPessoa(PessoaModel dados) {
+        if (dados.getNome() != null) {
+            this.nome = dados.getNome();
+        }
+        if (dados.getCpf() != null) {
+            this.cpf = dados.getCpf();
+        }
+        if (dados.getTelefone() != null) {
+            this.telefone = dados.getTelefone();
+        }
+        if (dados.getBloco() != null) {
+            this.bloco = dados.getBloco();
+        }
+        if (dados.getNumeroApartamento() != null) {
+            this.numeroApartamento = dados.getNumeroApartamento();
+        }
+        if (dados.getRelacao() != null) {
+            this.relacao = dados.getRelacao();
+        }
+    }
+
     public PessoaModel(DadosCadastrosPessoa dados) {
         this.nome = dados.nome();
         this.dataDeNascimento = dados.dataDeNascimento();
