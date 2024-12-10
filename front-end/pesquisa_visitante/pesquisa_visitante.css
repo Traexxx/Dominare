@@ -19,6 +19,24 @@ body, html {
     padding: 0;
 }
 
+.nav-superior {
+    color: var(--cor2);
+    background-color: var(--cor3);
+  }
+  
+  
+  .nav-superior i {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    nav i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
+  }
+
 nav{
     background-image: linear-gradient(#eeeeee,transparent );
     transition: background-color 0.3s ease, width 0.3s ease;
@@ -45,12 +63,10 @@ footer i{
 /* CLASSE NÃO SEMÃNTICA o.O */
 
 .main {
-    background-image: url("../img/fundo.png");
+    background-image: url("img/fundo.png");
     background-size: center;
     flex: 1;
     display: flex;
-    
-    min-height: 500px;
 }
 
 
@@ -58,28 +74,8 @@ footer i{
 
 
 /* Navbar Lateral */
-.nav-superior{
-    color: var(--cor2);
-    background-color:var(--cor3) ;
-}
-
-.nav-superior i {
-    font-size: 50px;
-    margin-right: 20px;
-  }
-  
-  @media (min-width: 576px) {
-    nav i {
-        font-size: 50px;
-        margin-right: 20px;
-    }
-  }
-
-/* Navbar Lateral */
-
-.nav-item{
-    font-size: 0.9rem;
-    border-radius: 8px;
+.nav-lateral{
+    background-image: linear-gradient(#eeeeee,transparent );
 }
 
 .nav-item{
@@ -92,8 +88,6 @@ footer i{
 }
 
 /* Tela central */
-
-
 .cadastro {
     flex: 1;
     display: flex;
@@ -108,7 +102,7 @@ footer i{
     border-radius: 10px;
     box-shadow: 0 10px 10px  var(--cor1);
     width: 100%;
-    max-width: 400px; /* Ajuste de largura do formulário */
+    max-width: 600px; /* Ajuste de largura do formulário */
 }
 
 .login {
@@ -124,6 +118,31 @@ footer i{
     font-size: 0.9rem;
     text-align: right;
 
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 
