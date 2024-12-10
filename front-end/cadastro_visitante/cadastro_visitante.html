@@ -57,19 +57,24 @@
                             oninput="mascaraCPF(event)" maxlength="14" />
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Bloco do morador</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1"
+                            placeholder="Digite aqui o número do bloco do morador" maxlength="5">
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Apartamento do morador</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Digite aqui o número do apê do morador">
+                        <input type="text" class="form-control" id="exampleInputPassword1"
+                            placeholder="Digite aqui o número do apê do morador" maxlength="5">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Telefone</label>
                         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="(xx)xxxxx-xxxx"
                             oninput="mascaraTelefone(event)" />
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <input type="checkbox" id="acessoLivre">
                         <label for="acessoLivre">Acesso livre</label>
-                    </div>
+                    </div> -->
 
                     <!-- Configurar a ir tela de redefinição -->
                     <button type="submit" class="btn btn-primary w-100 center">Cadastrar</button>
