@@ -12,6 +12,23 @@
   background-color: var(--cor1);
 }
 
+@media (max-width: 600px) {
+  .div-icons {
+    font-size: 30px !important;
+  }
+  .cards_p{
+    font-size: 15px;
+  }
+}
+
+.img_principal_p{
+  max-height: 200px;
+}
+
+.img_principal_g{
+  max-height: 500px;
+}
+
 /* .div-cards{
     margin-top: 20px;
 } */
