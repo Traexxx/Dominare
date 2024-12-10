@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
-
-import com.dominare.api.model.apartamento.ApartamentoModel;
 import com.dominare.api.model.pessoa.PessoaModel;
 import com.dominare.api.model.pessoa.PessoaRepository;
 
@@ -38,20 +36,11 @@ public class PessoaController {
         return "pessoa/cadastroPessoa";
     }
 
-
-
     // Post
     // @PostMapping("/cadastroPessoa")
     @PostMapping("/cadastrar")
     @Transactional
     public String salvarPessoa(@ModelAttribute PessoaModel pessoa) {
-    
-        // if (pessoa.getApartamento() == null) {
-        // ApartamentoModel apartamento = new ApartamentoModel();
-        // apartamento.setBloco("A");
-        // apartamento.setNumero("101");
-        // pessoa.setApartamento(apartamento); 
-        // }
         repository.save(pessoa);
         return "redirect:/pessoa/cadastrar";
 }

@@ -1,6 +1,6 @@
 package com.dominare.api.model.pessoa;
 
-import com.dominare.api.model.apartamento.DadosApartamento;
+
 
 public record DadosCadastrosPessoa(
         
@@ -8,7 +8,8 @@ public record DadosCadastrosPessoa(
         String dataDeNascimento,
         String cpf,
         String telefone,
-        DadosApartamento apartamento,
+        String bloco,
+        String numeroApartamento,
         Relacao relacao) {
 
 }

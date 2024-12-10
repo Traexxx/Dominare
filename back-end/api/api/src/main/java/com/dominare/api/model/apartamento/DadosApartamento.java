@@ -2,8 +2,8 @@ package com.dominare.api.model.apartamento;
 
 public record DadosApartamento(
     String bloco,
-    String numero
-
+    String numero,
+    String responsavel
 ) {
     
 }

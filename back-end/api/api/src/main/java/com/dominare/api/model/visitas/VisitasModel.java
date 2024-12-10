@@ -25,7 +25,8 @@ public class VisitasModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String apartamento;
+    private String bloco;
+    private String numeroApartamento;
     private String nome;
     private String cpf;
     private String data;
@@ -34,8 +35,8 @@ public class VisitasModel {
     private Boolean acessoLivre;
 
     // Contructor
-    // public VisitasModel(DadosCadastroVisita dados){
+    public VisitasModel(DadosCadastroVisita dados){
         
-    // } 
+    } 
     
 }

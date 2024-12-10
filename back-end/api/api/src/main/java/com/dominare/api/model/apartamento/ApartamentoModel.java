@@ -1,11 +1,4 @@
 package com.dominare.api.model.apartamento;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.dominare.api.model.pessoa.PessoaModel;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,7 +14,8 @@ public class ApartamentoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    private String responsavel;
     private String bloco;
     private String numero;
  
@@ -31,5 +25,6 @@ public class ApartamentoModel {
     public ApartamentoModel(DadosApartamento dados) {
         this.bloco = dados.bloco();
         this.numero = dados.numero();
+        this.responsavel = dados.responsavel();
     }
 }
