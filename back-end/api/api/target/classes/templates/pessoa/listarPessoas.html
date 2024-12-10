@@ -20,18 +20,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="pessoaModel : ${pessoas}">
-          <td th:text="${pessoas.id}">ID do Morador</td>
-          <td th:text="${pessoas.nome}">Nome do Morador</td>
-          <td th:text="${pessoas.cpf}">CPF do Morador</td>
-          <td th:text="${pessoas.telefone}">Telefone do Morador</td>
-          <td th:text="${pessoas.bloco}">Bloco do Morador</td>
-          <td th:text="${pessoas.apartamento}">Apartamento do Morador</td>
-          <td th:text="${pessoas.relacao}">Relação do Morador</td>
+        <tr th:each="/pessoa/PessoaModel : ${pessoas}">
+          <td th:text="${PessoaModel.id}">ID do Morador</td>
+          <td th:text="${PessoaModel.nome}">Nome do Morador</td>
+          <td th:text="${PessoaModel.cpf}">CPF do Morador</td>
+          <td th:text="${PessoaModel.telefone}">Telefone do Morador</td>
+          <td th:text="${PessoaModel.bloco}">Bloco do Morador</td>
+          <td th:text="${PessoaModel.numeroApartamento}">Apartamento do Morador</td>
+          <td th:text="${PessoaModel.relacao}">Relação do Morador</td>
         </tr>
       </tbody>
     </table>
-    <a th:href="@{/cadastro}">Cadastrar novo Morador</a>
+    <a th:href="@{../pessoa/cadastroPessoa}">Cadastrar novo Morador</a>
   </div>
 </body>
 

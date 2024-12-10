@@ -10,6 +10,6 @@ public record DadosCadastrosPessoa(
         String telefone,
         String bloco,
         String numeroApartamento,
-        Relacao relacao) {
+        String relacao) {
 
 }

@@ -30,8 +30,9 @@ public class PessoaModel {
     // // @Embedded
     // private ApartamentoModel apartamento;
 
-    @Enumerated(EnumType.STRING)
-    private Relacao relacao;
+    private String relacao;
+    // @Enumerated(EnumType.STRING)
+    // private Relacao relacao;
 
     public PessoaModel(DadosCadastrosPessoa dados) {
         this.nome = dados.nome();
@@ -40,7 +41,7 @@ public class PessoaModel {
         this.telefone = dados.telefone();
         this.bloco = dados.bloco();
         this.numeroApartamento = dados.numeroApartamento();
-        // this.relacao = dados.relacao();
+        this.relacao = dados.relacao();
         // this.apartamento = new ApartamentoModel(dados.apartamento());
     }
 }
